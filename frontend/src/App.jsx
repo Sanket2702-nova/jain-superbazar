@@ -20,7 +20,7 @@ function AppContent() {
   const isAdminPage = location.pathname.startsWith('/admin')
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <div className="flex flex-col min-h-screen bg-red-50 dark:bg-slate-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
       <CustomCursor />
       {!isAdminPage && <Navbar />}
       <main className="flex-1">

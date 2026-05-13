@@ -8,13 +8,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#DC2626', // Classic Vibrant Red
+        primary: '#EF4444', // Lighter Vibrant Red (Red 500)
         secondary: '#FFFFFF',
-        dark: '#991B1B', // Dark red
-        accent: '#EF4444', // Lighter red
+        dark: '#DC2626', // Red 600
+        accent: '#F87171', // Red 400
         gradient: {
-          from: '#DC2626',
-          to: '#F87171',
+          from: '#EF4444',
+          to: '#FCA5A5',
         }
       },
       fontFamily: {

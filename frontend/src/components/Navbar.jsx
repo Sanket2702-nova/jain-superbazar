@@ -73,14 +73,14 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 bg-red-900/95 dark:bg-red-950/95 backdrop-blur-xl shadow-lg border-b border-white/10 transition-all duration-300">
+      <nav className="sticky top-0 z-50 bg-red-600/95 dark:bg-red-900/95 backdrop-blur-xl shadow-lg border-b border-white/10 transition-all duration-300">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-[72px]">
           {/* Logo & Location */}
           <div className="flex items-center space-x-6">
             <Link to="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-red-400 rounded-xl flex items-center justify-center shadow-lg shadow-primary/40 group-hover:shadow-primary/60 group-hover:scale-110 transition-all duration-300">
+              <div className="w-10 h-10 bg-gradient-to-br from-primary to-red-400 rounded-xl flex items-center justify-center shadow-lg shadow-primary/30 group-hover:shadow-primary/50 group-hover:scale-110 transition-all duration-300">
                 <span className="text-white font-bold text-xl drop-shadow-md">JS</span>
               </div>
               <span className="hidden md:inline font-extrabold text-2xl bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400 transition-colors group-hover:from-primary">
@@ -178,7 +178,7 @@ const Navbar = () => {
                 </Link>
                 <button
                   onClick={handleLogout}
-                  className="bg-red-950 text-white px-5 py-2 rounded-lg hover:bg-red-800 active:scale-95 transition-all duration-300 font-bold text-sm"
+                  className="bg-red-700 text-white px-5 py-2 rounded-lg hover:bg-red-800 active:scale-95 transition-all duration-300 font-bold text-sm"
                 >
                   Logout
                 </button>

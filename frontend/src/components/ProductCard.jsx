@@ -98,16 +98,16 @@ const ProductCard = ({ product, index }) => {
             <div className="flex items-center bg-primary text-white rounded-lg overflow-hidden shadow-lg shadow-primary/20">
               <button
                 onClick={() => handleUpdateQuantity(quantity - 1)}
-                className="px-3 py-2 hover:bg-red-700 transition-colors font-bold text-lg"
+                className="px-3 py-2 hover:bg-dark transition-colors font-bold text-lg"
               >
                 -
               </button>
-              <span className="px-2 py-2 font-bold min-w-[30px] text-center bg-red-600/50">
+              <span className="px-2 py-2 font-bold min-w-[30px] text-center bg-primary/50">
                 {quantity}
               </span>
               <button
                 onClick={() => handleUpdateQuantity(quantity + 1)}
-                className="px-3 py-2 hover:bg-red-700 transition-colors font-bold text-lg"
+                className="px-3 py-2 hover:bg-dark transition-colors font-bold text-lg"
               >
                 +
               </button>
@@ -115,7 +115,7 @@ const ProductCard = ({ product, index }) => {
           ) : (
             <button
               onClick={handleAddToCart}
-              className="px-4 py-2 rounded-lg font-bold text-sm md:text-base uppercase tracking-wider transition-all duration-300 flex items-center gap-1.5 border-2 border-red-600 bg-red-50 dark:bg-red-900/30 text-red-700 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900/50 hover:shadow-lg hover:shadow-red-600/30 hover:scale-105"
+              className="px-4 py-2 rounded-lg font-bold text-sm md:text-base uppercase tracking-wider transition-all duration-300 flex items-center gap-1.5 border-2 border-primary bg-red-50 dark:bg-red-900/30 text-primary dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900/50 hover:shadow-lg hover:shadow-primary/30 hover:scale-105"
             >
               <span className="text-lg font-bold">+</span>
               <span>ADD</span>

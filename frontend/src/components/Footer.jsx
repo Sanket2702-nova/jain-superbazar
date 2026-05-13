@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <footer className="bg-red-950 text-white mt-20">
+    <footer className="bg-red-900 text-white mt-20">
       {/* Top accent */}
       <div className="h-1 bg-gradient-to-r from-primary via-red-400 to-primary"></div>
       <div className="h-1 bg-gradient-to-r from-red-600 via-red-400 to-red-600"></div>

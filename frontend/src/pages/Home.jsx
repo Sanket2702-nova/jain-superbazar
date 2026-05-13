@@ -55,7 +55,7 @@ const Home = () => {
   return (
     <div>
       {/* Hero Banner - Scrollable */}
-      <section className="relative bg-gradient-to-br from-red-600 via-red-700 to-red-800 text-white overflow-hidden py-12 lg:py-16 px-4 sm:px-6 lg:px-8 shadow-inner">
+      <section className="relative bg-gradient-to-br from-red-500 via-red-600 to-red-700 text-white overflow-hidden py-12 lg:py-16 px-4 sm:px-6 lg:px-8 shadow-inner">
         {/* Decorative blobs */}
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-72 h-72 rounded-full bg-white opacity-10 blur-3xl mix-blend-overlay pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-yellow-300 opacity-20 blur-3xl mix-blend-overlay pointer-events-none"></div>
@@ -155,7 +155,7 @@ const Home = () => {
       <div className="border-b-2 border-gray-300 dark:border-slate-700"></div>
 
       {/* Top Selling Products Auto-Scroll Banner */}
-      <section className="py-8 md:py-12 bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-white overflow-hidden shadow-inner">
+      <section className="py-8 md:py-12 bg-gradient-to-r from-red-600 via-red-500 to-red-600 text-white overflow-hidden shadow-inner">
         <div className="w-full px-2 sm:px-4 md:px-6 lg:px-8">
           <div className="mb-6 text-center">
             <h2 className="text-2xl md:text-3xl font-extrabold mb-1 text-white drop-shadow-md">
@@ -264,7 +264,7 @@ const Home = () => {
       <div className="border-b-2 border-gray-300 dark:border-slate-700"></div>
 
       {/* Featured Categories */}
-      <section className="py-12 md:py-16 w-full px-2 sm:px-4 md:px-6 lg:px-8 bg-gradient-to-b from-red-900/50 via-red-800/30 to-red-900/50">
+      <section className="py-12 md:py-16 w-full px-2 sm:px-4 md:px-6 lg:px-8 bg-gradient-to-b from-red-500/20 via-red-400/10 to-red-500/20">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-8 gap-4 px-2 md:px-4">
           <div className="flex-shrink-0">
             <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-1">
@@ -331,8 +331,8 @@ const Home = () => {
       <section className="py-12 md:py-16 w-full px-2 sm:px-4 md:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-8 gap-4 px-2 md:px-4">
           <div className="flex-shrink-0">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-1">
-              ⭐ <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Best Selling</span> Products
+            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white mb-1">
+              ⭐ <span className="bg-gradient-to-r from-primary to-red-400 bg-clip-text text-transparent">Best Selling</span> Products
             </h2>
             <p className="text-sm md:text-base text-white/70 font-medium">Customer favorites that everyone loves</p>
           </div>
@@ -361,7 +361,7 @@ const Home = () => {
 
       {/* Premium Offer Banner */}
       <section className="py-12 md:py-16 w-full px-2 sm:px-4 md:px-6 lg:px-8 bg-white dark:bg-slate-900">
-        <div className="relative overflow-hidden bg-gradient-to-br from-red-600 via-red-700 to-red-800 p-6 md:p-12 rounded-3xl shadow-2xl w-full border border-red-500/30">
+        <div className="relative overflow-hidden bg-gradient-to-br from-red-500 via-red-600 to-red-700 p-6 md:p-12 rounded-3xl shadow-2xl w-full border border-red-500/30">
           {/* Animated background elements */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-yellow-300/10 rounded-full blur-3xl pointer-events-none animate-pulse" style={{animationDelay: '1s'}}></div>

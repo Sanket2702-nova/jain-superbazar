@@ -7,7 +7,7 @@ const CategoryCard = ({ id, name, image }) => {
       to={`/products?category=${id}`}
       className="group flex flex-col items-center gap-3 cursor-pointer w-24 md:w-32 flex-shrink-0 transition-all duration-300"
     >
-      <div className="w-full aspect-square bg-gradient-to-br from-blue-50 to-blue-100 dark:from-slate-800 dark:to-slate-700 rounded-3xl p-4 flex justify-center items-center transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary/20 group-hover:scale-110 border border-blue-100 dark:border-slate-700 group-hover:border-primary/40">
+      <div className="w-full aspect-square bg-gradient-to-br from-red-50 to-red-100 dark:from-slate-800 dark:to-slate-700 rounded-3xl p-4 flex justify-center items-center transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary/20 group-hover:scale-110 border border-red-100 dark:border-slate-700 group-hover:border-primary/40">
         <img
           src={image}
           alt={name}
