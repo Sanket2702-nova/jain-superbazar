@@ -1,10 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 const CustomCursor = () => {
-  const [position, setPosition] = useState({ x: -100, y: -100 });
-  const [hovered, setHovered] = useState(false);
+  const cursorDotRef = useRef(null);
+  const cursorOutlineRef = useRef(null);
+  const requestRef = useRef(null);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [hovered, setHovered] = useState(false);
+  const [clicking, setClicking] = useState(false);
+
+  // Mouse position states
+  const mousePos = useRef({ x: -100, y: -100 });
+  const outlinePos = useRef({ x: -100, y: -100 });
 
   useEffect(() => {
     // Check if it's a touch device
@@ -16,24 +22,9 @@ const CustomCursor = () => {
     // Safely apply class to hide default cursor ONLY if custom cursor is active
     document.body.classList.add('custom-cursor-active');
 
-    // Detect dark mode
-    const isDark = document.documentElement.classList.contains('dark') || 
-                   window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setIsDarkMode(isDark);
-
-    // Watch for dark mode changes
-    const darkModeObserver = new MutationObserver(() => {
-      const isDark = document.documentElement.classList.contains('dark');
-      setIsDarkMode(isDark);
-    });
-
-    darkModeObserver.observe(document.documentElement, { 
-      attributes: true, 
-      attributeFilter: ['class'] 
-    });
-
-    const updatePosition = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+    const updateMousePosition = (e) => {
+      mousePos.current.x = e.clientX;
+      mousePos.current.y = e.clientY;
     };
 
     const handleMouseOver = (e) => {
@@ -46,46 +37,65 @@ const CustomCursor = () => {
       setHovered(isClickable);
     };
 
-    window.addEventListener('mousemove', updatePosition);
+    const handleMouseDown = () => setClicking(true);
+    const handleMouseUp = () => setClicking(false);
+
+    window.addEventListener('mousemove', updateMousePosition);
     window.addEventListener('mouseover', handleMouseOver);
+    window.addEventListener('mousedown', handleMouseDown);
+    window.addEventListener('mouseup', handleMouseUp);
+
+    // Smooth animation loop for the trailing outline
+    const animate = () => {
+      // Lerp (Linear Interpolation) for smooth trailing effect
+      outlinePos.current.x += (mousePos.current.x - outlinePos.current.x) * 0.15;
+      outlinePos.current.y += (mousePos.current.y - outlinePos.current.y) * 0.15;
+
+      if (cursorDotRef.current) {
+        cursorDotRef.current.style.transform = `translate3d(${mousePos.current.x}px, ${mousePos.current.y}px, 0)`;
+      }
+
+      if (cursorOutlineRef.current) {
+        cursorOutlineRef.current.style.transform = `translate3d(${outlinePos.current.x}px, ${outlinePos.current.y}px, 0)`;
+      }
+
+      requestRef.current = requestAnimationFrame(animate);
+    };
+
+    requestRef.current = requestAnimationFrame(animate);
 
     return () => {
-      window.removeEventListener('mousemove', updatePosition);
+      window.removeEventListener('mousemove', updateMousePosition);
       window.removeEventListener('mouseover', handleMouseOver);
-      darkModeObserver.disconnect();
+      window.removeEventListener('mousedown', handleMouseDown);
+      window.removeEventListener('mouseup', handleMouseUp);
+      cancelAnimationFrame(requestRef.current);
       document.body.classList.remove('custom-cursor-active');
     };
   }, []);
 
   if (isTouchDevice) return null;
 
-  // Colors that are visible in both light and dark modes
-  const dotColor = isDarkMode ? 'bg-white' : 'bg-gray-900';
-  const dotBorder = isDarkMode ? 'border-gray-900' : 'border-white';
-  const ringBorder = isDarkMode ? 'border-white' : 'border-gray-900';
-  const ringGlow = isDarkMode 
-    ? 'shadow-[0_0_8px_rgba(255,255,255,0.6)]' 
-    : 'shadow-[0_0_8px_rgba(0,0,0,0.3)]';
-  const ringHoverBg = isDarkMode ? 'bg-white/10' : 'bg-gray-900/10';
-
   return (
-    <>
-      {/* Inner Dot - Adapts to dark/light mode */}
+    <div className="pointer-events-none fixed inset-0 z-[10000] overflow-hidden mix-blend-difference">
+      {/* Center Dot */}
       <div 
-        className={`fixed top-0 left-0 w-3 h-3 ${dotColor} border-[1.5px] ${dotBorder} rounded-full pointer-events-none z-[10000] transition-transform duration-75 ease-out`}
-        style={{ 
-          transform: `translate3d(${position.x - 6}px, ${position.y - 6}px, 0) scale(${hovered ? 0.4 : 1})`,
-        }}
-      />
+        ref={cursorDotRef}
+        className={`absolute top-0 left-0 rounded-full bg-white transition-all duration-200 ease-out flex items-center justify-center font-bold text-black text-[10px] tracking-widest ${
+          hovered ? 'w-16 h-16 -ml-8 -mt-8 opacity-100 scale-100' : clicking ? 'w-3 h-3 -ml-1.5 -mt-1.5 opacity-50 scale-75' : 'w-4 h-4 -ml-2 -mt-2 opacity-100 scale-100'
+        }`}
+      >
+        {hovered && <span className="animate-fade-in mix-blend-normal">TAP</span>}
+      </div>
       
-      {/* Outer Ring - Adapts to dark/light mode with glow */}
+      {/* Trailing Outline Ring */}
       <div 
-        className={`fixed top-0 left-0 w-10 h-10 border-[2.5px] ${ringBorder} rounded-full pointer-events-none z-[9999] transition-all duration-300 ease-out flex items-center justify-center ${ringGlow} ${hovered ? ringHoverBg : 'bg-transparent'}`}
-        style={{ 
-          transform: `translate3d(${position.x - 20}px, ${position.y - 20}px, 0) scale(${hovered ? 1.4 : 1})`,
-        }}
+        ref={cursorOutlineRef}
+        className={`absolute top-0 left-0 rounded-full border border-white transition-all duration-300 ease-out ${
+          hovered ? 'w-24 h-24 -ml-12 -mt-12 opacity-0 scale-150' : clicking ? 'w-8 h-8 -ml-4 -mt-4 opacity-100 scale-90 border-2' : 'w-10 h-10 -ml-5 -mt-5 opacity-50 scale-100'
+        }`}
       />
-    </>
+    </div>
   );
 };
 
