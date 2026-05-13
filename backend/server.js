@@ -53,7 +53,12 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: 'Internal server error', error: err.message })
 })
 
-// Start Server
-app.listen(PORT, () => {
-  console.log(`✓ Server running on http://localhost:${PORT}`)
-})
+// Export the app for Vercel
+export default app
+
+// Only start server if not running as a Vercel function
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`✓ Server running on http://localhost:${PORT}`)
+  })
+}
