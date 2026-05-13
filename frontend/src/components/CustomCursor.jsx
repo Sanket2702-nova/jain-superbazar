@@ -81,8 +81,8 @@ const CustomCursor = () => {
       {/* Center Dot */}
       <div 
         ref={cursorDotRef}
-        className={`absolute top-0 left-0 rounded-full bg-[#B00E0E] border-2 border-white shadow-[0_0_10px_rgba(0,0,0,0.3)] transition-all duration-200 ease-out flex items-center justify-center font-bold text-white text-[10px] tracking-widest ${
-          hovered ? 'w-16 h-16 -ml-8 -mt-8 opacity-100 scale-100' : clicking ? 'w-3 h-3 -ml-1.5 -mt-1.5 opacity-50 scale-75' : 'w-4 h-4 -ml-2 -mt-2 opacity-100 scale-100'
+        className={`absolute top-0 left-0 rounded-full bg-slate-900 border-2 border-white shadow-[0_0_10px_rgba(0,0,0,0.5)] transition-all duration-200 ease-out flex items-center justify-center font-black text-white text-[12px] tracking-widest ${
+          hovered ? 'w-16 h-16 -ml-8 -mt-8 opacity-100 scale-100' : clicking ? 'w-4 h-4 -ml-2 -mt-2 opacity-50 scale-75' : 'w-5 h-5 -ml-2.5 -mt-2.5 opacity-100 scale-100'
         }`}
       >
         {hovered && <span className="animate-fade-in drop-shadow-md">TAP</span>}
@@ -91,8 +91,8 @@ const CustomCursor = () => {
       {/* Trailing Outline Ring */}
       <div 
         ref={cursorOutlineRef}
-        className={`absolute top-0 left-0 rounded-full border-2 border-[#B00E0E]/60 bg-white/20 backdrop-blur-[2px] shadow-[0_0_15px_rgba(176,14,14,0.3)] transition-all duration-300 ease-out ${
-          hovered ? 'w-24 h-24 -ml-12 -mt-12 opacity-0 scale-150' : clicking ? 'w-8 h-8 -ml-4 -mt-4 opacity-100 scale-90 border-[3px]' : 'w-10 h-10 -ml-5 -mt-5 opacity-100 scale-100'
+        className={`absolute top-0 left-0 rounded-full border-[3px] border-slate-900 shadow-[0_0_8px_rgba(0,0,0,0.3)] transition-all duration-300 ease-out ${
+          hovered ? 'w-24 h-24 -ml-12 -mt-12 opacity-0 scale-150' : clicking ? 'w-10 h-10 -ml-5 -mt-5 opacity-100 scale-90 border-[4px]' : 'w-12 h-12 -ml-6 -mt-6 opacity-80 scale-100'
         }`}
       />
     </div>
