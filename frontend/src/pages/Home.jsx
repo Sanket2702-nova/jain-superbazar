@@ -81,15 +81,15 @@ const Home = () => {
               <div className="inline-block px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md mb-6 border border-white/30 text-sm font-bold tracking-wider uppercase text-white shadow-sm">
                 100% Organic Products
               </div>
-              <h1 className="text-3xl md:text-5xl font-extrabold mb-4 leading-tight text-white drop-shadow-lg">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold mb-4 leading-tight text-white drop-shadow-lg">
                 Fresh <span className="text-yellow-300">Groceries</span><br /> At Your Doorstep
               </h1>
-              <p className="text-base md:text-lg mb-6 text-white/90 font-medium max-w-lg leading-relaxed drop-shadow-sm">
+              <p className="text-sm md:text-lg mb-6 text-white/90 font-medium max-w-lg leading-relaxed drop-shadow-sm">
                 Experience premium online grocery shopping with freshness guaranteed, delivered fast.
               </p>
               <button
                 onClick={() => navigate('/products')}
-                className="bg-white text-primary font-bold px-6 md:px-8 py-3 md:py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-gray-50 active:scale-95 transition-all shadow-xl shadow-emerald-900/20"
+                className="w-full sm:w-auto bg-white text-primary font-bold px-6 md:px-8 py-3 md:py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-gray-50 active:scale-95 transition-all shadow-xl shadow-red-900/20"
               >
                 Shop Now
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -350,7 +350,7 @@ const Home = () => {
         ) : error ? (
           <ErrorState message={error} onRetry={() => fetchProducts()} />
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 px-2 md:px-4">
+          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-6 px-2 md:px-4">
             {bestSellingProducts.map((product, index) => (
               <ProductCard key={product._id} product={product} index={index} />
             ))}
