@@ -267,10 +267,10 @@ const Home = () => {
       <section className="py-12 md:py-16 w-full px-2 sm:px-4 md:px-6 lg:px-8 bg-gradient-to-b from-red-500/20 via-red-400/10 to-red-500/20">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-8 gap-4 px-2 md:px-4">
           <div className="flex-shrink-0">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-1">
-              🛒 Shop by <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Category</span>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-red-950 dark:text-white mb-1">
+              🛒 Shop by <span className="bg-gradient-to-r from-primary to-red-500 bg-clip-text text-transparent">Category</span>
             </h2>
-            <p className="text-sm md:text-base text-white/70 font-medium">Explore our wide range of products</p>
+            <p className="text-sm md:text-base text-red-900/70 dark:text-white/70 font-medium">Explore our wide range of products</p>
           </div>
           <Link
             to="/categories"
@@ -332,9 +332,9 @@ const Home = () => {
         <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-8 gap-4 px-2 md:px-4">
           <div className="flex-shrink-0">
             <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white mb-1">
-              ⭐ <span className="bg-gradient-to-r from-primary to-red-400 bg-clip-text text-transparent">Best Selling</span> Products
+              ⭐ <span className="bg-gradient-to-r from-primary to-red-500 bg-clip-text text-transparent">Best Selling</span> Products
             </h2>
-            <p className="text-sm md:text-base text-white/70 font-medium">Customer favorites that everyone loves</p>
+            <p className="text-sm md:text-base text-gray-600 dark:text-white/70 font-medium">Customer favorites that everyone loves</p>
           </div>
           <Link
             to="/products"
