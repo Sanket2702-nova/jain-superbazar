@@ -17,7 +17,7 @@ const AdminProducts = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/products')
+      const response = await fetch('/api/products')
       const data = await response.json()
       setProducts(Array.isArray(data) ? data : [])
     } catch (error) {
@@ -44,8 +44,8 @@ const AdminProducts = () => {
     try {
       const method = editingId ? 'PUT' : 'POST'
       const url = editingId 
-        ? `http://localhost:5000/api/products/${editingId}`
-        : 'http://localhost:5000/api/products'
+        ? `/api/products/${editingId}`
+        : '/api/products'
 
       const response = await fetch(url, {
         method,
@@ -76,7 +76,7 @@ const AdminProducts = () => {
 
     const token = localStorage.getItem('auth_token')
     try {
-      const response = await fetch(`http://localhost:5000/api/products/${id}`, {
+      const response = await fetch(`/api/products/${id}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       })
