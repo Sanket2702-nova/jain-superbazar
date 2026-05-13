@@ -13,8 +13,8 @@ body {
   font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fef2f2; /* Lightest red background (Red 50) */
-  color: #0f172a; /* Darker text for better readability */
+  background-color: #E6DCDC; /* New Secondary Background (230, 220, 220) */
+  color: #1a1a1a; /* Very dark text for readability */
 }
 
 @media (pointer: fine) {
@@ -49,8 +49,8 @@ html {
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 10px rgba(239, 68, 68, 0.2); }
-  50% { box-shadow: 0 0 20px rgba(239, 68, 68, 0.4); }
+  0%, 100% { box-shadow: 0 0 10px rgba(176, 14, 14, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(176, 14, 14, 0.4); }
 }
 
 @keyframes bounce-gentle {
@@ -104,9 +104,9 @@ section {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #f87171, #ef4444, #dc2626);
+  background: linear-gradient(180deg, #D41212, #B00E0E, #8C0B0B);
   border-radius: 10px;
-  border: 3px solid #fef2f2;
+  border: 3px solid #E6DCDC;
 }
 .dark ::-webkit-scrollbar-thumb {
   border-color: #0f172a;

@@ -121,20 +121,20 @@ const Home = () => {
           </div>
 
           {/* Hero Slide 3 */}
-          <div className="flex-shrink-0 w-full md:w-4/5 lg:w-3/4 flex items-center rounded-3xl bg-red-50 dark:bg-red-950/20 border border-red-100 dark:border-red-900/30 p-8 md:p-12">
+          <div className="flex-shrink-0 w-full md:w-4/5 lg:w-3/4 flex items-center rounded-3xl bg-secondary dark:bg-red-950/20 border border-red-200 dark:border-red-900/30 p-8 md:p-12">
             <div className="flex-1">
               <div className="inline-block px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md mb-6 border border-white/30 text-sm font-semibold tracking-wider uppercase shadow-sm">
                 💰 Special Offer
               </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold mb-4 leading-tight drop-shadow-md">
-                Save <span className="text-red-600">₹500</span><br /> On Your First <span className="text-red-600">Order</span>
+              <h2 className="text-3xl md:text-5xl font-extrabold mb-4 leading-tight drop-shadow-md text-red-950">
+                Save <span className="text-primary">₹500</span><br /> On Your First <span className="text-primary">Order</span>
               </h2>
-              <p className="text-base md:text-lg mb-6 text-white/90 font-medium max-w-lg leading-relaxed">
+              <p className="text-base md:text-lg mb-6 text-gray-700 font-medium max-w-lg leading-relaxed">
                 Use code WELCOME500 at checkout and get instant cashback on your purchase.
               </p>
               <button
                 onClick={() => navigate('/categories')}
-                className="bg-white text-primary font-bold px-6 md:px-8 py-3 md:py-4 rounded-xl hover:bg-gray-50 active:scale-95 transition-all shadow-xl shadow-emerald-900/20"
+                className="bg-primary text-white font-bold px-6 md:px-8 py-3 md:py-4 rounded-xl hover:bg-dark active:scale-95 transition-all shadow-xl shadow-red-900/20"
               >
                 Browse Categories →
               </button>
@@ -264,7 +264,7 @@ const Home = () => {
       <div className="border-b-2 border-gray-300 dark:border-slate-700"></div>
 
       {/* Featured Categories */}
-      <section className="py-12 md:py-16 w-full px-2 sm:px-4 md:px-6 lg:px-8 bg-gradient-to-b from-red-500/20 via-red-400/10 to-red-500/20">
+      <section className="py-12 md:py-16 w-full px-2 sm:px-4 md:px-6 lg:px-8 bg-secondary/30">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-8 gap-4 px-2 md:px-4">
           <div className="flex-shrink-0">
             <h2 className="text-2xl md:text-3xl font-extrabold text-red-950 dark:text-white mb-1">

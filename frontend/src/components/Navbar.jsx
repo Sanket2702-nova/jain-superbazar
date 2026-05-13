@@ -73,7 +73,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 bg-red-600/95 dark:bg-red-900/95 backdrop-blur-xl shadow-lg border-b border-white/10 transition-all duration-300">
+      <nav className="sticky top-0 z-50 bg-[#B00E0E]/95 dark:bg-red-950/95 backdrop-blur-xl shadow-lg border-b border-white/10 transition-all duration-300">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-[72px]">
@@ -178,7 +178,7 @@ const Navbar = () => {
                 </Link>
                 <button
                   onClick={handleLogout}
-                  className="bg-red-700 text-white px-5 py-2 rounded-lg hover:bg-red-800 active:scale-95 transition-all duration-300 font-bold text-sm"
+                  className="bg-[#8C0B0B] text-white px-5 py-2 rounded-lg hover:bg-red-900 active:scale-95 transition-all duration-300 font-bold text-sm"
                 >
                   Logout
                 </button>
