@@ -39,50 +39,58 @@ export const useAuthStore = create(
       login: async (email, password) => {
         set({ loading: true })
         try {
-          console.log('🔐 Login attempt:', { email })
-          const response = await apiClient.post('/auth/login', { email, password })
-          console.log('✅ Login success:', response.data)
+          console.log('🔐 Mock Login attempt:', { email })
           
-          const { token, user } = response.data
-          set({ token, user, isAuthenticated: true, loading: false })
-          localStorage.setItem('token', token)
-          localStorage.setItem('user', JSON.stringify(user))
+          // Simulate network delay
+          await new Promise(resolve => setTimeout(resolve, 600))
           
-          // Set auth header for future requests
-          apiClient.defaults.headers.common['Authorization'] = `Bearer ${token}`
-          axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
+          // Mock successful login response
+          const mockUser = {
+            _id: 'demo_user_123',
+            name: email.split('@')[0] || 'Demo User',
+            email: email,
+            role: 'admin' // Grant admin access for demo purposes
+          }
+          const mockToken = 'mock_jwt_token_123456789'
+          
+          set({ token: mockToken, user: mockUser, isAuthenticated: true, loading: false })
+          localStorage.setItem('token', mockToken)
+          localStorage.setItem('user', JSON.stringify(mockUser))
           
           return { success: true }
         } catch (error) {
           console.error('❌ Login error:', error)
           set({ loading: false })
-          const errorMessage = error.response?.data?.message || error.message || 'Login failed. Please check your email and password.'
-          return { success: false, error: errorMessage }
+          return { success: false, error: 'Login failed.' }
         }
       },
 
       register: async (name, email, password) => {
         set({ loading: true })
         try {
-          console.log('📝 Registration attempt:', { name, email })
-          const response = await apiClient.post('/auth/register', { name, email, password })
-          console.log('✅ Registration success:', response.data)
+          console.log('📝 Mock Registration attempt:', { name, email })
           
-          const { token, user } = response.data
-          set({ token, user, isAuthenticated: true, loading: false })
-          localStorage.setItem('token', token)
-          localStorage.setItem('user', JSON.stringify(user))
+          // Simulate network delay
+          await new Promise(resolve => setTimeout(resolve, 600))
           
-          // Set auth header for future requests
-          apiClient.defaults.headers.common['Authorization'] = `Bearer ${token}`
-          axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
+          // Mock successful registration
+          const mockUser = {
+            _id: 'demo_user_123',
+            name: name || email.split('@')[0] || 'Demo User',
+            email: email,
+            role: 'admin'
+          }
+          const mockToken = 'mock_jwt_token_123456789'
+          
+          set({ token: mockToken, user: mockUser, isAuthenticated: true, loading: false })
+          localStorage.setItem('token', mockToken)
+          localStorage.setItem('user', JSON.stringify(mockUser))
           
           return { success: true }
         } catch (error) {
           console.error('❌ Registration error:', error)
           set({ loading: false })
-          const errorMessage = error.response?.data?.message || error.message || 'Registration failed. Please try again.'
-          return { success: false, error: errorMessage }
+          return { success: false, error: 'Registration failed.' }
         }
       },
 
