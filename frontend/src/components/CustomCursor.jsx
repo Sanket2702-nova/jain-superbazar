@@ -8,10 +8,13 @@ const CustomCursor = () => {
 
   useEffect(() => {
     // Check if it's a touch device
-    if (window.matchMedia('(pointer: coarse)').matches) {
+    if (window.matchMedia('(pointer: coarse)').matches && !window.matchMedia('(pointer: fine)').matches) {
       setIsTouchDevice(true);
       return;
     }
+
+    // Safely apply class to hide default cursor ONLY if custom cursor is active
+    document.body.classList.add('custom-cursor-active');
 
     // Detect dark mode
     const isDark = document.documentElement.classList.contains('dark') || 
@@ -50,6 +53,7 @@ const CustomCursor = () => {
       window.removeEventListener('mousemove', updatePosition);
       window.removeEventListener('mouseover', handleMouseOver);
       darkModeObserver.disconnect();
+      document.body.classList.remove('custom-cursor-active');
     };
   }, []);
 

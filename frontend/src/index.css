@@ -24,10 +24,15 @@ body {
   color: #111827; /* Gray 900 for sharp text */
 }
 
-@media (pointer: fine) {
-  * {
-    cursor: none !important;
-  }
+body.custom-cursor-active,
+body.custom-cursor-active * {
+  cursor: none !important;
+}
+
+body.custom-cursor-active input,
+body.custom-cursor-active textarea,
+body.custom-cursor-active [contenteditable="true"] {
+  cursor: text !important;
 }
 
 html {
