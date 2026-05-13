@@ -350,7 +350,7 @@ const Home = () => {
         ) : error ? (
           <ErrorState message={error} onRetry={() => fetchProducts()} />
         ) : (
-          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-6 px-2 md:px-4">
+          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-4 md:gap-6 px-1 md:px-4">
             {bestSellingProducts.map((product, index) => (
               <ProductCard key={product._id} product={product} index={index} />
             ))}

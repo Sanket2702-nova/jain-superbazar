@@ -3,28 +3,27 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <footer className="bg-red-900 text-white mt-20">
+    <footer className="bg-red-900 text-white mt-12 md:mt-20">
       {/* Top accent */}
-      <div className="h-1 bg-gradient-to-r from-primary via-red-400 to-primary"></div>
       <div className="h-1 bg-gradient-to-r from-red-600 via-red-400 to-red-600"></div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 py-10 md:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
           {/* Company Info */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3 group">
-              <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-400 rounded-xl flex items-center justify-center shadow-lg shadow-red-600/40 group-hover:shadow-red-600/60 transition-shadow">
-                <span className="text-white font-bold text-xl">JS</span>
+          <div className="space-y-4 text-center sm:text-left">
+            <div className="flex items-center justify-center sm:justify-start space-x-3 group">
+              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <span className="text-red-900 font-bold text-xl">JS</span>
               </div>
-              <span className="font-extrabold text-xl bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">Jain Super Bazar</span>
+              <span className="font-extrabold text-xl text-white">Jain Super Bazar</span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-300 text-sm leading-relaxed max-w-xs mx-auto sm:mx-0">
               Fresh groceries delivered to your doorstep. Quality and freshness guaranteed, premium service.
             </p>
-            <div className="flex gap-3 pt-4">
-              <a href="#" className="w-10 h-10 bg-red-600/20 hover:bg-red-600/40 rounded-lg flex items-center justify-center transition-all duration-300">📱</a>
-              <a href="#" className="w-10 h-10 bg-red-600/20 hover:bg-red-600/40 rounded-lg flex items-center justify-center transition-all duration-300">💬</a>
-              <a href="#" className="w-10 h-10 bg-red-600/20 hover:bg-red-600/40 rounded-lg flex items-center justify-center transition-all duration-300">🔗</a>
+            <div className="flex justify-center sm:justify-start gap-4 pt-2">
+              <a href="#" className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-all">📱</a>
+              <a href="#" className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-all">💬</a>
+              <a href="#" className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-all">📷</a>
             </div>
           </div>
 
