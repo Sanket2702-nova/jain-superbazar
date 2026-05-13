@@ -49,8 +49,8 @@ html {
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 10px rgba(153, 27, 27, 0.2); }
-  50% { box-shadow: 0 0 20px rgba(153, 27, 27, 0.4); }
+  0%, 100% { box-shadow: 0 0 10px rgba(176, 14, 14, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(176, 14, 14, 0.4); }
 }
 
 @keyframes bounce-gentle {
@@ -104,9 +104,9 @@ section {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #B91C1C, #991B1B, #7F1D1D);
+  background: linear-gradient(180deg, #D41212, #B00E0E, #8C0B0B);
   border-radius: 10px;
-  border: 3px solid #FFFFFF;
+  border: 3px solid #E6DCDC;
 }
 .dark ::-webkit-scrollbar-thumb {
   border-color: #0f172a;
