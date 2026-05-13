@@ -77,22 +77,22 @@ const CustomCursor = () => {
   if (isTouchDevice) return null;
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-[10000] overflow-hidden mix-blend-difference">
+    <div className="pointer-events-none fixed inset-0 z-[10000] overflow-hidden">
       {/* Center Dot */}
       <div 
         ref={cursorDotRef}
-        className={`absolute top-0 left-0 rounded-full bg-white transition-all duration-200 ease-out flex items-center justify-center font-bold text-black text-[10px] tracking-widest ${
+        className={`absolute top-0 left-0 rounded-full bg-[#B00E0E] border-2 border-white shadow-[0_0_10px_rgba(0,0,0,0.3)] transition-all duration-200 ease-out flex items-center justify-center font-bold text-white text-[10px] tracking-widest ${
           hovered ? 'w-16 h-16 -ml-8 -mt-8 opacity-100 scale-100' : clicking ? 'w-3 h-3 -ml-1.5 -mt-1.5 opacity-50 scale-75' : 'w-4 h-4 -ml-2 -mt-2 opacity-100 scale-100'
         }`}
       >
-        {hovered && <span className="animate-fade-in mix-blend-normal">TAP</span>}
+        {hovered && <span className="animate-fade-in drop-shadow-md">TAP</span>}
       </div>
       
       {/* Trailing Outline Ring */}
       <div 
         ref={cursorOutlineRef}
-        className={`absolute top-0 left-0 rounded-full border border-white transition-all duration-300 ease-out ${
-          hovered ? 'w-24 h-24 -ml-12 -mt-12 opacity-0 scale-150' : clicking ? 'w-8 h-8 -ml-4 -mt-4 opacity-100 scale-90 border-2' : 'w-10 h-10 -ml-5 -mt-5 opacity-50 scale-100'
+        className={`absolute top-0 left-0 rounded-full border-2 border-[#B00E0E]/60 bg-white/20 backdrop-blur-[2px] shadow-[0_0_15px_rgba(176,14,14,0.3)] transition-all duration-300 ease-out ${
+          hovered ? 'w-24 h-24 -ml-12 -mt-12 opacity-0 scale-150' : clicking ? 'w-8 h-8 -ml-4 -mt-4 opacity-100 scale-90 border-[3px]' : 'w-10 h-10 -ml-5 -mt-5 opacity-100 scale-100'
         }`}
       />
     </div>
