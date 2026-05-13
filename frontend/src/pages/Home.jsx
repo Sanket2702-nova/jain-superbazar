@@ -268,9 +268,9 @@ const Home = () => {
         <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-8 gap-4 px-2 md:px-4">
           <div className="flex-shrink-0">
             <h2 className="text-2xl md:text-3xl font-extrabold text-red-950 dark:text-white mb-1">
-              🛒 Shop by <span className="bg-gradient-to-r from-primary to-red-500 bg-clip-text text-transparent">Category</span>
+              🛒 Shop by <span className="bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">Category</span>
             </h2>
-            <p className="text-sm md:text-base text-red-900/70 dark:text-white/70 font-medium">Explore our wide range of products</p>
+            <p className="text-sm md:text-base text-red-950 dark:text-white/80 font-bold">Explore our wide range of products</p>
           </div>
           <Link
             to="/categories"
@@ -332,9 +332,9 @@ const Home = () => {
         <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-8 gap-4 px-2 md:px-4">
           <div className="flex-shrink-0">
             <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white mb-1">
-              ⭐ <span className="bg-gradient-to-r from-primary to-red-500 bg-clip-text text-transparent">Best Selling</span> Products
+              ⭐ <span className="bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">Best Selling</span> Products
             </h2>
-            <p className="text-sm md:text-base text-gray-600 dark:text-white/70 font-medium">Customer favorites that everyone loves</p>
+            <p className="text-sm md:text-base text-gray-900 dark:text-white/80 font-bold">Customer favorites that everyone loves</p>
           </div>
           <Link
             to="/products"

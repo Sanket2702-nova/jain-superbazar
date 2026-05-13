@@ -83,7 +83,7 @@ const Navbar = () => {
               <div className="w-10 h-10 bg-gradient-to-br from-primary to-red-400 rounded-xl flex items-center justify-center shadow-lg shadow-primary/30 group-hover:shadow-primary/50 group-hover:scale-110 transition-all duration-300">
                 <span className="text-white font-bold text-xl drop-shadow-md">JS</span>
               </div>
-              <span className="hidden md:inline font-extrabold text-2xl bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400 transition-colors group-hover:from-primary">
+              <span className="hidden md:inline font-extrabold text-2xl bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-200 transition-colors group-hover:from-white">
                 Jain Super Bazar
               </span>
             </Link>
