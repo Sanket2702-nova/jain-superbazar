@@ -155,7 +155,7 @@ const Home = () => {
       <div className="border-b-2 border-gray-300 dark:border-slate-700"></div>
 
       {/* Top Selling Products Auto-Scroll Banner */}
-      <section className="py-8 md:py-12 bg-red-600 text-white overflow-hidden shadow-md">
+      <section className="relative py-8 md:py-12 bg-red-600 text-white overflow-hidden shadow-md">
         <div className="w-full px-2 sm:px-4 md:px-6 lg:px-8">
           <div className="mb-6 text-center">
             <h2 className="text-2xl md:text-3xl font-extrabold mb-1 text-white drop-shadow-md">
