@@ -8,15 +8,20 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
   font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #FFFFFF; /* Clean White Background */
   color: #111827; /* Gray 900 for sharp text */
-  overflow-x: hidden; /* Prevent horizontal scroll */
-  width: 100%;
 }
 
 @media (pointer: fine) {
