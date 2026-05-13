@@ -73,10 +73,10 @@ const Home = () => {
         {/* Scrollable Hero Content */}
         <div
           ref={heroScrollRef}
-          className="relative z-10 flex gap-8 overflow-x-auto scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] max-w-7xl mx-auto px-16 md:px-20"
+          className="relative z-10 flex gap-4 md:gap-8 overflow-x-auto scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] max-w-7xl mx-auto px-2 md:px-20"
         >
           {/* Hero Slide 1 */}
-          <div className="flex-shrink-0 w-full md:w-4/5 lg:w-3/4 flex items-center rounded-3xl bg-white/10 backdrop-blur-lg border border-white/20 p-8 md:p-12 shadow-2xl">
+          <div className="flex-shrink-0 w-[85%] sm:w-full md:w-4/5 lg:w-3/4 flex items-center rounded-2xl md:rounded-3xl bg-white/10 backdrop-blur-lg border border-white/20 p-5 md:p-12 shadow-2xl">
             <div className="flex-1">
               <div className="inline-block px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md mb-6 border border-white/30 text-sm font-bold tracking-wider uppercase text-white shadow-sm">
                 100% Organic Products
@@ -100,7 +100,7 @@ const Home = () => {
           </div>
 
           {/* Hero Slide 2 */}
-          <div className="flex-shrink-0 w-full md:w-4/5 lg:w-3/4 flex items-center rounded-3xl bg-white/10 backdrop-blur-lg border border-white/20 p-8 md:p-12 shadow-2xl">
+          <div className="flex-shrink-0 w-[85%] sm:w-full md:w-4/5 lg:w-3/4 flex items-center rounded-2xl md:rounded-3xl bg-white/10 backdrop-blur-lg border border-white/20 p-5 md:p-12 shadow-2xl">
             <div className="flex-1">
               <div className="inline-block px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md mb-6 border border-white/30 text-sm font-semibold tracking-wider uppercase shadow-sm">
                 🚚 Fast Delivery
@@ -121,7 +121,7 @@ const Home = () => {
           </div>
 
           {/* Hero Slide 3 */}
-          <div className="flex-shrink-0 w-full md:w-4/5 lg:w-3/4 flex items-center rounded-3xl bg-white dark:bg-red-950/20 border border-gray-200 dark:border-red-900/30 p-8 md:p-12 shadow-xl">
+          <div className="flex-shrink-0 w-[85%] sm:w-full md:w-4/5 lg:w-3/4 flex items-center rounded-2xl md:rounded-3xl bg-white dark:bg-red-950/20 border border-gray-200 dark:border-red-900/30 p-5 md:p-12 shadow-xl">
             <div className="flex-1">
               <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 mb-6 border border-primary/20 text-sm font-semibold tracking-wider uppercase shadow-sm text-primary">
                 💰 Special Offer
