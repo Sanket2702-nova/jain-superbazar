@@ -14,7 +14,7 @@ const CategoryCard = ({ id, name, image }) => {
           className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-125 filter group-hover:drop-shadow-lg"
         />
       </div>
-      <h3 className="text-xs md:text-sm font-bold text-center text-red-950 dark:text-gray-100 leading-tight transition-colors duration-300 group-hover:text-primary">
+      <h3 className="text-xs md:text-sm font-bold text-center text-primary dark:text-gray-100 leading-tight transition-colors duration-300 group-hover:text-red-600">
         {name}
       </h3>
       {/* Underline on hover */}
