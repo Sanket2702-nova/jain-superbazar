@@ -8,13 +8,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#B00E0E', // Primary Crimson (176, 14, 14)
-        secondary: '#E6DCDC', // Secondary Warm Gray (230, 220, 220)
+        primary: '#B00E0E', // Primary Crimson
+        secondary: '#FFFFFF', // Pure White
         dark: '#8C0B0B', 
         accent: '#D41212', 
         gradient: {
           from: '#B00E0E',
-          to: '#E6DCDC',
+          to: '#FFFFFF',
         }
       },
       fontFamily: {

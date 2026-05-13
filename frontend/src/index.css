@@ -13,8 +13,8 @@ body {
   font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #E6DCDC; /* New Secondary Background (230, 220, 220) */
-  color: #1a1a1a; /* Very dark text for readability */
+  background-color: #FFFFFF; /* Clean White Background */
+  color: #111827; /* Gray 900 for sharp text */
 }
 
 @media (pointer: fine) {
